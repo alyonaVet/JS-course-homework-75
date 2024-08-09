@@ -24,7 +24,7 @@ app.post('/encode', (req: Request, res: Response) => {
     const {password, message} = req.body;
 
     const encodedMessage = vigenereCipher(message, password, true);
-    return res.send({"encode": encodedMessage});
+    return res.send({"encoded": encodedMessage});
 });
 
 app.post('/decode', (req: Request, res: Response) => {
